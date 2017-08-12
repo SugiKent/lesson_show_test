@@ -7,7 +7,7 @@ agent.user_agent_alias = "Mac Safari 4"
 base_url = "http://www.rep-rikkyo.com"
 time_stamp = Time.now.strftime("%H%M%S")
 
-for id in 1..13999 do
+for id in 1..12380 do
   begin
     agent.get("#{base_url}/lesson/#{id}") do |page|
       doc = Nokogiri::HTML(page.content.toutf8)
