@@ -19,6 +19,8 @@ for id in 1..12380 do
       error_msg = []
       error_msg << id
       error_msg << e.page.uri
+      error_msg << id - 2052
+      error_msg << "ng"
       csv << error_msg
     end
     File.open("results/#{time_stamp}_results.csv", 'a') do |file|
