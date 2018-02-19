@@ -4,7 +4,7 @@ require 'csv'
 
 agent = Mechanize.new
 agent.user_agent_alias = "Mac Safari 4"
-base_url = "http://www.rep-rikkyo.com"
+base_url = "http://0.0.0.0:3000/"
 time_stamp = Time.now.strftime("%H%M%S")
 
 for id in 1..12380 do
