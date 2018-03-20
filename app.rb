@@ -7,7 +7,7 @@ agent.user_agent_alias = "Mac Safari 4"
 base_url = "http://0.0.0.0:3000/"
 time_stamp = Time.now.strftime("%H%M%S")
 
-for id in 1..21663 do
+for id in 7800..21663 do
   begin
     agent.get("#{base_url}/lesson/#{id}") do |page|
       doc = Nokogiri::HTML(page.content.toutf8)
@@ -20,6 +20,7 @@ for id in 1..21663 do
       error_msg << id
       error_msg << e.page.uri
       error_msg << id - 2052
+      error_msg << id - 12372
       error_msg << "ng"
       csv << error_msg
     end
